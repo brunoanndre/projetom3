@@ -6,7 +6,6 @@ if($_GET['id'] !== $_SESSION['Usuario']['id']){
     echo "Você não tem permissão para editar essa reserva!";
     echo "<br>";
     echo "<button type=\"button\" onclick=\"location.href='../home.php'\">Voltar</button>";
-    
    exit();
 }
  
@@ -41,7 +40,7 @@ if($result = $mysqli->query($sql)){
         <br>
         <small>Campos Obrigatórios!</small>
         <br>
-        <form action="editar_controller.php?id=<?php echo $id;?>" method="post">
+        <form action="editar_controler.php?id=<?php echo $id;?>" method="post">
         <label>Nome</label> <br>
         <input type="text" id="nome" name="nome" required="true" maxlenght="50" value="<?php echo $nome;?>">
         <br>
